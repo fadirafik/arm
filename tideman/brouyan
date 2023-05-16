@@ -1,0 +1,181 @@
+                    if (i == pairs[0].winner && j == pairs[0].loser && i !=j )
+                    {
+                        diff[c]= 0;
+                        c++;
+                    }
+
+
+
+
+                    da lel =0 fel pairs
+                                for(int i =0 ; i < length ; i ++)
+            {
+                if(pairs[i].winner == pairs[b].winner && pairs[i].loser == pairs[b].loser && i!=b)
+                    {
+                        pairs[b].winner = 0;
+                        pairs[b].loser = 0;
+                    }
+            }
+
+                    for(int i = 0 ; i < length; i ++)
+        {
+            if(pairs[i].winner == 0 && pairs[i].loser == 0 )
+            {
+                diff[i]=0;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+            int length = (candidate_count * (candidate_count - 1) / 2);
+     for(int i = 0 ; i < length ; i ++)
+     {
+        for(int j ; j < length ; j++)
+        {
+            if(pairs[i].winner != pairs[j].loser && i != j)
+            {
+                break;
+            }
+            else if (pairs[i].winner == 0 && pairs[i].loser == 0)
+            {
+                pairs[i-1].winner = 0 ;
+                pairs[i-1].loser = 0 ;
+            }
+            else
+            {
+                pairs[length-1].winner =0;
+                pairs[length-1].loser = 0;
+            }
+        }
+     }
+
+
+    pair least[0];
+    for (int i = 0 ; i < length ; i ++)
+    {
+        if(pairs[i].winner == 0 && pairs[i].loser == 0)
+        {
+            least[0] = pairs[i-1];
+        }
+    }
+
+
+
+
+
+    && pairs[i].winner == 0 && pairs[i].loser == 0
+
+
+
+                    pairs[i-1].winner = 0 ;
+                pairs[i-1].loser = 0 ;
+
+
+
+
+
+
+                int remainder ;
+                int updated ;
+                while(cycle== true)
+                {
+                    for(int i =0 ; i <length ; i++)
+                    {
+                        if (pairs[i].winner == 0 && pairs[i].loser == 0)
+                        {
+                            remainder = length - i
+                        }
+                    }
+                    updated = length- remainder
+                    for(int i = 0 ; i < updated i++)
+                    {
+                        for (int j = 0 ; j < updated; j++)
+                        {
+                            if (pairs[i].winner != pairs[j].loser)
+                            {
+                                cycle = false
+                            }
+                        }
+                    }
+                    if(cycle = true)
+                    {
+                        pairs[updated-1].winner = 0;
+                        pairs[updated-1].loser = 0;
+                    }
+                }
+
+
+int wincounts[candidate_count];
+int max;
+int winner;
+
+
+    for(int i = 0; i < candidate_count; i++)
+    {
+        for(int j = 0 ; j < candidate_count; j++)
+        {
+            wincounts[i]+= locked[j][i];
+        }
+    }
+
+    for(int i = 0 ; i < candidate_count; i++)
+    {
+        if (wincounts[i] == 0)
+        {
+            winner = i;
+        }
+    }
+
+printf("%s\n" , candidates[winner]);
+
+
+
+
+
+   pair temp2[0];
+    int length = (candidate_count * (candidate_count - 1) / 2);
+    int diff[pair_count];
+
+
+        for(int i = 0; i < candidate_count; i++)
+        {
+            for(int j = 0 ; j < candidate_count; j++)
+            {
+                if (preferences[i][j] > preferences[j][i])
+                {
+
+                    diff[pair_count++]= preferences[i][j]-preferences[j][i];
+                }
+            }
+     }
+
+
+
+        for(int i = 0 ; i <pair_count ; i++)
+        {
+            for(int j = 0 ; j <(pair_count-1) ; j++)
+            {
+                if(diff[j] < diff[j+1])
+                {
+                    int temp = diff[j];
+                    diff[j] = diff[j+1];
+                    diff[j+1] = temp;
+                    temp2[0] = pairs[j];
+                    pairs[j] = pairs[j+1];
+                    pairs[j+1]= temp2[0];
+                }
+            }
+        }
+        for(int b = 0 ; b <length ; b++)
+        {
+            printf("%d %d\n" , pairs[b].winner,pairs[b].loser );
+        }
+    return;
+}
